@@ -1,0 +1,28 @@
+<div class="flex flex-col p-4 text-normal">
+  <!-- interface buttons -->
+  <div class="flex">
+    <div class="form-control w-full max-w-xs">
+      <label class="label">
+        <span class="label-text">Categories</span>
+      </label>
+      <select [(ngModel)]="_genre" name="selectedGenre"
+        class="select select-bordered select-sm w-44"
+        (ngModelChange)="genreChanged()">
+        <option *ngFor="let genre of _genreArray" value={{genre.id}}>{{genre.name}}</option>
+      </select>
+    </div>
+
+    <div class="flex items-end justify-self-center">
+      <div class="btn-group">
+        <button [disabled]="_page <= 1" (click)="pagePrevious()" class="btn btn-outline btn-sm">«</button>
+        <button class="btn btn-outline btn-sm">Page {{_page}}</button>
+        <button [disabled]="_page >= _totalPages" (click)="pageNext()" class="btn btn-outline btn-sm">»</button>
+      </div>
+    </div>
+  </div>
+  <!-- movies list -->
+  <div class="mx-4 flex flex-row justify-center p-4 flex-wrap gap-4">
+    <movie-card *ngFor="let movie of _movieArray" [movie]="movie"></movie-card>
+  </div>
+</div>
+
