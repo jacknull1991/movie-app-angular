@@ -1,6 +1,7 @@
 # MovieApp
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 15.2.4.
+This is a single page application generated with [Angular CLI](https://github.com/angular/angular-cli) version 15.2.4.
+This project uses [Tailwindcss](https://tailwindcss.com/) and [DaisyUI](https://daisyui.com/), and retrieves data from [TMDB](https://www.themoviedb.org/).
 
 ## Development server
 
